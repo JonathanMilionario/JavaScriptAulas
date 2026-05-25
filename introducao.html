@@ -5,6 +5,8 @@
         <meta charset="UTF-8" />
 
         <title> Hello World!</title>
+        <link rel="stylesheet" href="CSS/style.css" />
+        
     </head>
 
     <body>
@@ -22,7 +24,7 @@
 
         <main>
              <p>Para cada mudança, salve com CTRL+S</p>
-            <p>A linguagem é de marcação de textos composta por tags, o segredo é conhecer tags como as: 
+            <p class="destaque">A linguagem é de marcação de textos composta por tags, o segredo é conhecer tags como as: 
     
             <h3>1. Estrutura Básica</h3>
             <p>"!DOCTYPE html": Usa a última versão do html 5 </p>
@@ -32,7 +34,7 @@
             <p>"title": Define o título da página que aparece na aba do navegador.</p>
             <p>"body": Contém todo o conteúdo visível da página, como textos, imagens e vídeos.</p>
             <hr>
-    
+                
             <h3>2. Títulos e Textos</h3>
             <h1>Título1</h1>
             <h6>Título6</h6>
@@ -41,6 +43,13 @@
             <p>Esse é um paragrafo</p>
             <p>"strong" e "b":  Coloca o texto em negrito</p> 
             <p>"em" e "i": Coloca o texto em itálico</p>
+            <p>"u": Sublinha o texto</p>
+            <p>"br": Quebra de linha, é uma tag auto contida, ou seja, não precisa de abertura e fechamento, basta colocar a tag e fechar ela ficando assim: "tag br / tag"
+            <p>"hr": Coloca uma linha horizontal para separar seções do conteúdo.
+            <p>"blockquote": Indica uma citação ou trecho destacado, geralmente exibido com recuos e formatação especial.
+            <p>para criar um texto para testar alguma formatação basta escrever `lorem`e teclar tab</p>>
+            <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab veritatis totam maxime alias facere minus laborum, aut ipsam nostrum dolorem facilis a quod ut quam unde iure dolor qui natus?</p>
+            </p>
             <hr>
 
             <h3>3. Links e Mídia</h3>
@@ -118,7 +127,95 @@
             <p>" h6 align="left" "</p>
             <h6 align="left">"align="left"""colocado dentro da tag para o texto ficar alinhado na esquerda</h6>
             <p>Para encontrar mais informações acesse o site <a target="_blank" href="https://www.w3schools.com/html/default.asp"> w3scools </a></p>     
-        </main>
+            <hr>
+
+            <h3>Resumo sobre o uso do CSS</h3>
+
+            <p>CSS (Cascading Style Sheets) é a linguagem usada para definir o estilo de páginas web.</p>
+            <ol> 
+                <li>- **O que faz**: controla cores, fontes, tamanhos, espaçamentos, alinhamentos, bordas e layout dos elementos HTML.</li>
+                <li>- **Como funciona**: aplica regras a elementos HTML usando seletores como `tag`, `.classe` e `#id`.</li>
+                <li>- **Principais vantagens**:</li>
+                <li>- separa estilo do conteúdo,</li>
+                <li>- facilita manter aparência consistente em várias páginas,</li>
+                <li>- permite criar interfaces responsivas e visualmente atraentes.</li>
+                <li>- **Exemplo básico**:</li>
+                <li>- HTML define a estrutura,</li>
+                <li>- CSS define a apresentação.</li>
+            </ol>
+            <h3>### Uso comum</h3>
+            <ol>
+                <li>- definir estilo global (`body`, `h1`, `p`)</li>
+                <li>- personalizar componentes (`menu`, `botões`, formulários)</li>
+                <li>- criar layouts com `flexbox` e `grid`</li>
+                <li>- adaptar para diferentes tamanhos de tela com `media queries`</li>
+            </ol>
+
+            <p> Em resumo, o CSS transforma o HTML simples em páginas bonitas e organizadas, controlando a aparência e a experiência visual do site.</p>
+            
+            <h3>Css Inline</h3> 
+            
+            <p>O CSS inline é uma forma de aplicar estilos diretamente a um elemento HTML usando o atributo `style` `/style`. Ele é útil para aplicar estilos específicos a um único elemento atraves de um seletor `h2{}` e dentro da chave do seletor, colocamos o bloco `color: red;`,ainda dentro do seletor, eu também poderia mudar a posição do texto com o bloco `text-align: center`, mas não é recomendado para grandes projetos devido à dificuldade de manutenção e falta de reutilização.</p>
+            <p>posso colocar um seletor com duas coisas ou mais tmabém, `h1,h2{}` e dentro colocar um bloco`text-transform: uppercase;` para deixar h1 e h2 com caixa alta de uma única vez</p>
+            <p>caso queira uma lista especifica que está dento do nav, basta coloca um seletor `nav li{}`</p>
+            <p>vamos colocar um bloco nessa lista para ela ficar em uma linha, `display: inline; `</p>
+            <p>posso criar uma classe como seletor `class="destaque"`, coloco essa classe dentro de uma tag e paragrafo e dentro de uma tag de h2 especificos, para mudar somente aquilo que estiver com essa classe, o seletor da classe se inicia com um ponto `.destaque{}`</p>
+            <p>Exemplo de CSS inline:</p>
+            <p>outra forma de seletor é usando um `id="img-logo"` coloco essa id dentro da tag da imagem e no dentro do style coloco com um jogo da velha(hashtag) `#img-logo{}`</p>
+            <p><code>&lt;h1 style="color: blue; font-size: 24px;"&gt;Título Azul&lt;/h1&gt;</code></p>
+            <p>Vantagens do CSS inline:</p>
+            <ol>
+                <li>- Fácil de aplicar para estilos rápidos e específicos.</li>
+                <li>- Sobrescreve estilos de folhas externas ou internas.</li>
+            </ol>
+            <p>Desvantagens do CSS inline:</p>
+            <ol>
+                <li>- Dificulta a manutenção, especialmente em projetos grandes.</li>
+                <li>- Não permite reutilização de estilos, levando a código redundante.</li>
+                <li>- Pode tornar o HTML desorganizado e difícil de ler.</li>
+            </ol>
+            <p>Em geral, é melhor usar CSS externo ou interno para manter o código limpo e fácil de gerenciar, reservando o CSS inline para casos específicos onde uma rápida personalização é necessária.</p>
+
+            <h3>CSS Externo</h3>
+            <p>O CSS externo é uma forma de aplicar estilos a uma página web usando um arquivo separado com a extensão `.css`. Ele é recomendado para projetos maiores, pois permite a reutilização de estilos e facilita a manutenção do código.</p>
+            <p>Exemplo de CSS externo:</p>
+            <p>Primeiro, criamos uma pasta chamad `CSS` com o seguinte conteúdo:</p>
+            <p>Segundo, criamos um arquivo chamado `styles.css` com o seguinte conteúdo:</p>
+            <p>Terceiro, recortamos o que estava entre a tag style e coloamos dentro do arquivo style.css</p>
+            <p>Por fim, vinculamos o arquivo CSS à nossa página HTML usando a tag `<link>` dentro do `<head>` do documento HTML, ficando assim:
+           ]<p><code>&lt;link rel="stylesheet" href="css/styles.css"&gt
+            </code></p>
+            <p>Vantagens do CSS externo:</p>
+            <ol>
+                <li>- Permite a reutilização de estilos em várias páginas, promovendo consistência visual.</li>
+                <li>- Facilita a manutenção, pois as alterações no arquivo CSS afetam todas as páginas vinculadas.</li>
+                <li>- Mantém o HTML limpo e organizado, separando estrutura e estilo.</li>
+            </ol>
+            <p>Desvantagens do CSS externo:</p>
+            <ol>
+                <li>- Requer uma solicitação HTTP adicional para carregar o arquivo CSS, o que pode afetar o tempo de carregamento da página.</li>
+                <li>- Se o arquivo CSS estiver indisponível (por exemplo, devido a um erro de caminho), a página pode ser exibida sem estilos, resultando em uma aparência desorganizada.</li>
+            </ol>
+            <p>Em geral, o CSS externo é a melhor prática para a maioria dos projetos web, especialmente aqueles com múltiplas páginas, pois promove a organização e facilita a manutenção do código.</p>
+
+            <h3>CSS dentro da Tag</h3>
+            <p>O CSS dentro da tag é uma forma de aplicar estilos diretamente dentro da tag HTML usando o atributo `style`. Esta abordagem é útil para estilos rápidos e específicos, mas não é recomendada para projetos maiores devido às dificuldades de manutenção.</p>
+            <p>Exemplo de CSS dentro da tag:</p>
+            <p>Podemos aplicar estilos diretamente a um elemento HTML usando o atributo `style`,    ficando assim: `<h1 style="color: blue; font-size: 24px;">Título Azul</h1>`</p>
+            <p>Vantagens do CSS dentro da tag:</p>
+            <ol>
+                <li>- Fácil de aplicar para estilos rápidos e específicos.</li>
+                <li>- Sobrescreve estilos de folhas externas ou internas.</li>
+            </ol>
+            <p>Desvantagens do CSS dentro da tag:</p>   
+            <ol>
+                <li>- Dificulta a manutenção, especialmente em projetos grandes.</li>
+                <li>- Não permite reutilização de estilos, levando a código redundante.</li>
+                <li>- Pode tornar o HTML desorganizado e difícil de ler.</li>
+            </ol>
+            <p>Em geral, é melhor usar CSS externo ou interno para manter o código limpo e fácil de gerenciar, reservando o CSS dentro da tag para casos específicos onde uma rápida personalização é necessária.</p>
+
+            </main>
 
         <footer> 
             <i><p align="center">Todos os direitos reservados!</p></i>
